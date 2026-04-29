@@ -1,0 +1,23 @@
+{
+    "name": "Flutter Dev Environment",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "Dart-Code.flutter",
+                "Dart-Code.dart-code"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "features": {
+        // Thêm tính năng này để dùng được thiết bị USB (điện thoại thật)
+        "ghcr.io/devcontainers/features/common-utils:1": {}
+    },
+    "runArgs": [
+        "--privileged",
+        "-v", "/dev/bus/usb:/dev/bus/usb"
+    ]
+}
